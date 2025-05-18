@@ -37,6 +37,11 @@ function isSameYear(a: Date | string | number, b: Date | string | number) {
 function getYear(date: Date | string | number) {
   return new Date(date).getFullYear()
 }
+
+// 添加标签链接生成函数
+function getTagHref(tag: string) {
+  return `/tags/${encodeURIComponent(tag)}`
+}
 </script>
 
 <template>
@@ -70,6 +75,23 @@ function getYear(date: Date | string | number) {
           </div>
         </div>
         <div opacity-50 text-sm>{{ post.data.description }}</div>
+        <!-- 添加标签显示 -->
+        <div v-if="post.data.tags && post.data.tags.length" mt-2 flex="~ wrap gap-2">
+          <a
+            v-for="tag in post.data.tags"
+            :key="tag"
+            :href="getTagHref(tag)"
+            text-xs px-2 py-0.5
+            bg-gray-100 dark:bg-gray-800
+            rounded-full
+            transition-colors duration-300
+            hover:bg-gray-800 hover:dark:bg-gray-100
+            hover:text-gray-100 hover:dark:text-gray-800
+            @click.stop
+          >
+            {{ tag }}
+          </a>
+        </div>
       </a>
     </li>
   </ul>

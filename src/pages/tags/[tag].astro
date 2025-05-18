@@ -1,0 +1,41 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import ListPosts from '@/components/ListPosts.vue'
+import { getPosts } from '@/utils/posts'
+
+export async function getStaticPaths() {
+  const posts = await getPosts()
+
+  // 收集所有标签
+  const allTags = new Set<string>()
+  posts.forEach((post) => {
+    if (post.data.tags && Array.isArray(post.data.tags)) {
+      post.data.tags.forEach((tag) => allTags.add(tag))
+    }
+  })
+
+  // 为每个标签创建路径
+  return Array.from(allTags).map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }))
+}
+
+const { tag } = Astro.params
+const decodedTag = decodeURIComponent(tag as string)
+
+// 获取包含该标签的所有文章
+const allPosts = await getPosts()
+const taggedPosts = allPosts.filter(
+  (post) => post.data.tags && Array.isArray(post.data.tags) && post.data.tags.includes(decodedTag),
+)
+---
+
+<BaseLayout title={`标签: ${decodedTag}`} description={`包含标签 "${decodedTag}" 的所有文章`}>
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold">标签: {decodedTag}</h1>
+    <p class="opacity-70 mt-2">共找到 {taggedPosts.length} 篇文章</p>
+  </div>
+
+  <ListPosts list={taggedPosts} />
+</BaseLayout>

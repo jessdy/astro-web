@@ -84,7 +84,7 @@ export const siteConfig = {
       },
       {
         text: 'GitHub Repository',
-        href: 'https://github.com/jessdy',
+        href: 'https://github.com/jessdy/astro-web',
       },
     ],
   },
