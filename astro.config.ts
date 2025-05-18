@@ -7,7 +7,7 @@ import UnoCSS from 'unocss/astro'
 export default defineConfig({
   site: 'https://astro-theme-vitesse.netlify.app/',
   server: {
-    port: 1977,
+    port: 1982,
   },
   integrations: [
     mdx(),

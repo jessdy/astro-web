@@ -1,13 +1,13 @@
 {
-  "name": "astro-theme-vitesse",
+  "name": "astro-jessdy",
   "type": "module",
   "version": "1.3.1",
   "description": "A minimal, SEO-friendly portfolio and blog theme for Astro, supports Vue and UnoCSS.",
-  "author": "Kieran Wong <kieranwme@gmail.com> (https://github.com/kieranwv/)",
+  "author": "Kieran Wong <chrisjessdy@gmail.com> (https://github.com/jessdy/)",
   "license": "MIT",
   "keywords": [
-    "kieranwong9865",
-    "astro-theme-vitesse",
+    "jessdy",
+    "astro-jessdy",
     "astro",
     "blog",
     "starter",

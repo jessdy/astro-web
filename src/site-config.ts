@@ -1,62 +1,57 @@
 export const siteConfig = {
-  author: 'Kieran Wang',
+  author: 'Jessdy Zhang',
   title: 'Vitesse theme for Astro',
-  subtitle: 'Vitesse theme for Astro, supports Vue and UnoCSS.',
-  description: 'A Minimal, SEO-friendly portfolio and blog theme for Astro.',
+  subtitle: 'Web3 × AI × Proxies × Projects',
+  description: 'Web3资讯 × AI科技 × 代理 × 项目',
   image: {
     src: '/hero.jpg',
     alt: 'Website Main Image',
   },
-  email: 'kieranwme@gmail.com',
+  email: 'chrisjessdy@gmail.com',
   socialLinks: [
     {
       text: 'GitHub',
-      href: 'https://github.com/kieranwv/astro-theme-vitesse',
+      href: 'https://github.com/jessdy',
       icon: 'i-simple-icons-github',
       header: 'i-ri-github-line',
     },
     {
       text: 'Twitter',
-      href: '',
+      href: 'https://x.com/chrisjessdy',
       icon: 'i-simple-icons-x',
       header: 'i-ri-twitter-x-line',
     },
     {
-      text: 'Linkedin',
-      href: '',
-      icon: 'i-simple-icons-linkedin',
+      text: 'Telegram',
+      href: 'http://t.me/jessdy2',
+      icon: 'i-simple-icons-telegram',
     },
     {
-      text: 'Instagram',
+      text: 'Discord',
       href: '',
-      icon: 'i-simple-icons-instagram',
-    },
-    {
-      text: 'Youtube',
-      href: '',
-      icon: 'i-simple-icons-youtube',
+      icon: 'i-simple-icons-discord',
     },
   ],
   header: {
     logo: {
       src: '/favicon.svg',
-      alt: 'Logo Image',
+      alt: 'Jessdy',
     },
     navLinks: [
       {
-        text: 'Blog',
-        href: '/blog',
+        text: 'Web3',
+        href: '/web3',
       },
       {
-        text: 'Notes',
-        href: '/blog/notes',
+        text: 'AI',
+        href: '/ai',
       },
       {
-        text: 'Talks',
-        href: '/blog/talks',
+        text: '代理',
+        href: '/proxies',
       },
       {
-        text: 'Projects',
+        text: '项目',
         href: '/projects',
       },
     ],
@@ -64,36 +59,32 @@ export const siteConfig = {
   page: {
     blogLinks: [
       {
-        text: 'Blog',
-        href: '/blog',
+        text: 'Web3',
+        href: '/web3',
       },
       {
-        text: 'Notes',
-        href: '/blog/notes',
+        text: 'AI',
+        href: '/ai',
       },
       {
-        text: 'Talks',
-        href: '/blog/talks',
+        text: '代理',
+        href: '/proxies',
+      },
+      {
+        text: '项目',
+        href: '/projects',
       },
     ],
   },
   footer: {
     navLinks: [
       {
-        text: 'Posts Props',
-        href: '/posts-props',
-      },
-      {
-        text: 'Markdown Style',
-        href: '/md-style',
-      },
-      {
-        text: 'View on Astro',
-        href: 'https://astro.build/themes/details/vitesse-theme-for-astro/',
+        text: 'Power by Astro',
+        href: 'https://astro.build/',
       },
       {
         text: 'GitHub Repository',
-        href: 'https://github.com/kieranwv/astro-theme-vitesse',
+        href: 'https://github.com/jessdy',
       },
     ],
   },
