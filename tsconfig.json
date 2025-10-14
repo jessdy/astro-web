@@ -3,9 +3,11 @@
   "compilerOptions": {
     "jsx": "preserve",
     "baseUrl": ".",
+    "moduleResolution": "node",
     "paths": {
       "@/*": ["src/*"]
     },
+    "types": ["vue"],
     "strictNullChecks": true
   }
 }

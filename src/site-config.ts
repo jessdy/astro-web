@@ -1,6 +1,6 @@
 export const siteConfig = {
   author: 'Jessdy Zhang',
-  title: 'Vitesse theme for Astro',
+  title: '0xJessdy - 专注Web3、AI、代理、优质项目',
   subtitle: 'Web3 × AI × Proxies × Projects',
   description: 'Web3资讯 × AI科技 × 代理 × 项目',
   image: {
@@ -9,6 +9,12 @@ export const siteConfig = {
   },
   email: 'chrisjessdy@gmail.com',
   socialLinks: [
+    {
+      text: 'LinkerFans',
+      href: 'https://linker.fans/jessdy',
+      icon: 'i-fa6-solid-bowl-rice',
+      header: 'i-fa6-solid-bowl-rice',
+    },
     {
       text: 'GitHub',
       href: 'https://github.com/jessdy',
