@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import { type CollectionPosts } from '@/types'
 import { getPosts } from '@/utils/posts'
+import TableOfContents from '@/components/TableOfContents.vue'
 
 export async function getStaticPaths() {
   const posts = await getPosts()
@@ -44,4 +45,5 @@ function getDate(date: string) {
     }
     <Content />
   </article>
+  <TableOfContents client:load />
 </BaseLayout>
