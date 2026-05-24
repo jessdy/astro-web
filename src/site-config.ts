@@ -57,12 +57,8 @@ export const siteConfig = {
         href: '/proxies',
       },
       {
-        text: '开源',
+        text: '开源项目',
         href: '/opensource',
-      },
-      {
-        text: '项目',
-        href: '/projects',
       },
     ],
   },
@@ -81,12 +77,8 @@ export const siteConfig = {
         href: '/proxies',
       },
       {
-        text: '开源',
+        text: '开源项目',
         href: '/opensource',
-      },
-      {
-        text: '项目',
-        href: '/projects',
       },
     ],
   },
