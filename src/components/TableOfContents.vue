@@ -230,7 +230,6 @@ onUnmounted(() => {
   max-height: calc(100vh - 160px);
   overflow-y: auto;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   border-radius: 0.5rem;
   border: 1px solid rgba(125, 125, 125, 0.2);
