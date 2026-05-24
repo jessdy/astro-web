@@ -1,8 +1,8 @@
 ---
-import BaseLayout from '/src/layouts/BaseLayout.astro'
-import ListPosts from '/src/components/ListPosts.vue'
-import siteConfig from '/@src/site-config'
-import { getPosts } from '/@src/utils/posts'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import ListPosts from '@/components/ListPosts.vue'
+import siteConfig from '@/site-config'
+import { getPosts } from '@/utils/posts'
 
 export async function getStaticPaths() {
   const paths = siteConfig.page.blogLinks.map((nav) => {
@@ -17,6 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { path } = Astro.params
+
 const posts = await getPosts('opensource')
 
 function activeLink(pathname: string) {
@@ -30,7 +31,7 @@ function activeLink(pathname: string) {
       siteConfig.page.blogLinks.map((nav) => (
         <a
           aria-label={nav.text}
-          class={`blog-index-nav-link text-3xl font-bold ${activeLink(nav.href) ? 'opacity-80' : 'opacity-30 hover:opacity-50'}`}
+          class={`nav-link text-3xl font-bold ${activeLink(nav.href) ? 'opacity-80' : 'opacity-30 hover:opacity-50'}`}
           href={nav.href}
         >
           {nav.text}
