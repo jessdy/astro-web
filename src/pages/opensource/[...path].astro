@@ -1,0 +1,42 @@
+---
+import BaseLayout from '/src/layouts/BaseLayout.astro'
+import ListPosts from '/src/components/ListPosts.vue'
+import siteConfig from '/@src/site-config'
+import { getPosts } from '/@src/utils/posts'
+
+export async function getStaticPaths() {
+  const paths = siteConfig.page.blogLinks.map((nav) => {
+    const href = nav.href.replace('/opensource', '')
+    return {
+      params: {
+        path: href === '' ? undefined : href.replace(/^\/+|\/+$/g, ''),
+      },
+    }
+  })
+  return paths
+}
+
+const { path } = Astro.params
+Const posts = await getPosts('opensource')
+
+function activeLink(pathname: string) {
+  return Astro.url.pathname.replace(/\/+/g, '/').replace(/\/$/, '') === pathname
+}
+---
+
+<BaseLayout title="开源" description="高价值开源项目计示" pageNav={true} pageOperate={true}>
+  <div class="flex flex-col gap-2 sm:flex-row sm:gap-4 flex-wrap mb-8">
+    {
+      siteConfig.page.blogLinks.map((nav) => (
+        <a
+          aria-label={nav.text}
+          class={`blog-index-nav-link text-3xl font-bold ${activeLink(nav.href) ? 'opacity-80' : 'opacity-30 hover:opacity-50'}`}
+          href={nav.href}
+        >
+          {nav.text}
+        </a>
+      ))
+    }
+  </div>
+  <ListPosts list={posts} />
+</BaseLayout>
