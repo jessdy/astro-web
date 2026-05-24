@@ -1,8 +1,8 @@
 export const siteConfig = {
   author: 'Jessdy Zhang',
-  title: '0xJessdy - 专注Web3、AI、代理、优质项目',
-  subtitle: 'Web3 × AI × Proxies × Projects',
-  description: 'Web3资讯 × AI科技 × 代理 × 项目',
+  title: '0xJessdy - 专注Web3、AI、代理、开源项目',
+  subtitle: 'Web3 × AI × Proxies × OpenSource',
+  description: 'Web3资访 × AI科技 × 代理 × 开源项目',
   image: {
     src: '/hero.jpg',
     alt: 'Website Main Image',
@@ -57,6 +57,10 @@ export const siteConfig = {
         href: '/proxies',
       },
       {
+        text: '开源',
+        href: '/opensource',
+      },
+      {
         text: '项目',
         href: '/projects',
       },
@@ -75,6 +79,10 @@ export const siteConfig = {
       {
         text: '代理',
         href: '/proxies',
+      },
+      {
+        text: '开源',
+        href: '/opensource',
       },
       {
         text: '项目',
